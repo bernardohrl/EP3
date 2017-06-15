@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>Cat-alog-app test</title>
+
+    <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../../src/Cat-alog-app/Cat-alog-app.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <Cat-alog-app></Cat-alog-app>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('Cat-alog-app', function() {
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'Cat-alog-app');
+        });
+      });
+    </script>
+  </body>
+</html>

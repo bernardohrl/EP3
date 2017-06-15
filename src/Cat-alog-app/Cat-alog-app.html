@@ -1,0 +1,220 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="Cat-alog-item.html">
+
+
+
+<dom-module id="Cat-alog-app">
+
+<!-- Style -->
+  <link rel="import" type="css" href="./style-sheet.css">
+
+  <template>
+
+    <style>
+     :host {
+        display: block;
+      }
+    </style>
+    <div class="wrapper">
+      <h2>Cat-Alogo de Fotos</h2>
+
+          <iron-pages selected="0">
+
+            <section>
+              <div class="small-view">
+                <img src="../../images/img11.JPG"/>
+              </div>
+              <details>
+                <summary>
+                  <img class="pic" src="../../images/img1.JPG"/>
+                </summary>
+                <p> Olar vocêr quer brincarrrrr <p>
+              </details>
+              <div class="small-view">
+                <img class="pic" src="../../images/img2.JPG"/>
+              </div>
+            </section>
+
+            <section>
+              <div class="small-view">
+                  <img src="../../images/img1.JPG"/>
+              </div>
+              <details>
+                <summary>
+                  <img class="pic" src="../../images/img2.JPG"/>
+                </summary>
+                <p> Acho que eu ví um piu-piu <p>
+              </details>
+              <div class="small-view">
+                <img src="../../images/img3.JPG"/>
+              </div>
+            </section>
+
+            <section>
+              <div class="small-view">
+                <img src="../../images/img2.JPG"/>
+              </div>
+              <details>
+                <summary>
+                  <img class="pic" src="../../images/img3.JPG"/>
+                </summary>
+                <p> boladex pastel <p>
+              </details>
+              <div class="small-view">
+                <img src="../../images/img4.JPG"/>
+              </div>
+            </section>
+
+            <section>
+              <div class="small-view">
+                <img src="../../images/img3.JPG"/>
+              </div>
+              <details>
+                <summary>
+                  <img class="pic" src="../../images/img4.JPG"/>
+                </summary>
+                <p> retards herp derp :v <p>
+              </details>
+              <div class="small-view">
+                <img src="../../images/img5.JPG"/>
+              </div>
+            </section>
+
+            <section>
+              <div class="small-view">
+                <img src="../../images/img4.JPG"/>
+              </div>
+              <details>
+                <summary>
+                <img class="pic" src="../../images/img5.JPG"/>
+                </summary>
+                <p> cosplay_de_myllota.jpg <p>
+              </details>
+              <div class="small-view">
+                <img src="../../images/img6.JPG"/>
+              </div>
+            </section>
+
+            <section>
+              <div class="small-view">
+                <img src="../../images/img5.JPG"/>
+              </div>
+              <details>
+                <summary>
+                  <img class="pic" src="../../images/img6.JPG"/>
+                </summary>
+                <p> nhouwwssssssssssssssss kawaii <p>
+              </details>
+              <div class="small-view">
+                <img src="../../images/img7.JPG"/>
+              </div>
+            </section>
+
+            <section>
+              <div class="small-view">
+                <img src="../../images/img6.JPG"/>
+              </div>
+              <details>
+                <summary>
+                  <img class="pic" src="../../images/img7.JPG"/>
+                </summary>
+                <p> keropi <p>
+              </details>
+              <div class="small-view">
+                <img src="../../images/img8.JPG"/>
+              </div>
+            </section>
+
+            <section>
+              <div class="small-view">
+                <img src="../../images/img7.JPG"/>
+              </div>
+              <details>
+                <summary>
+                  <img class="pic" src="../../images/img8.JPG"/>
+                </summary>
+                <p> arregaçada-banda-uo.mp3 <p>
+              </details>
+              <div class="small-view">
+                <img src="../../images/img9.JPG"/>
+              </div>
+            </section>
+
+            <section>
+              <div class="small-view">
+                <img src="../../images/img8.JPG"/>
+              </div>
+              <details>
+                <summary>
+                  <img class="pic" src="../../images/img9.JPG"/>
+                </summary>
+                <p> da ideia <p>
+              </details>
+              <div class="small-view">
+                <img src="../../images/img10.JPG"/>
+              </div>
+            </section>
+
+
+            <section>
+              <div class="small-view">
+                <img src="../../images/img9.JPG"/>
+              </div>
+              <details>
+                <summary>
+                  <img class="pic" src="../../images/img10.JPG"/>
+                </summary>
+                <p> rock balbocat >><p>
+              </details>
+              <div class="small-view">
+                <img src="../../images/img11.JPG"/>
+              </div>
+            </section>
+
+            <section>
+              <div class="small-view">
+                <img src="../../images/img10.JPG"/>
+              </div>
+              <details>
+                <summary>
+                  <img class="pic" src="../../images/img11.JPG"/>
+                </summary>
+                <p> você disse fotoca???? <p>
+              </details>
+              <div class="small-view">
+                <img src="../../images/img1.JPG"/>
+              </div>
+            </section>
+
+          </iron-pages>
+
+      <div class="controlls">
+        <button on-tap="_goPrev"> Anterior </button>
+        <!-- <paper-icon-button icon="favorite" on-tap="_goNext"> Next </paper-icon-button> -->
+        <button on-tap="_goNext"> Proximo </button>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'Cat-alog-app',
+
+      _goNext: function() {
+        var pages = document.querySelector('iron-pages');
+        pages.selectNext();
+        // this.$.pages.selectNext();
+      },
+
+      _goPrev: function() {
+        var pages = document.querySelector('iron-pages');
+        pages.selectPrevious();
+        // this.$.pages.selectPrevious();
+      },
+
+    });
+  </script>
+</dom-module>

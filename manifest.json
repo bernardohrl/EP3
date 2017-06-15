@@ -1,0 +1,7 @@
+{
+  "name": "Cat-alog",
+  "short_name": "Cat-alog",
+  "description": "Makes a cat-alog",
+  "start_url": "/",
+  "display": "standalone"
+}
